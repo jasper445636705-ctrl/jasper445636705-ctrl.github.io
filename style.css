@@ -283,6 +283,12 @@ html{
 
 @media (max-width: 768px) {
 
+
+    body {
+        background: linear-gradient(to right, black, #321753);
+
+    }
+
     .header {
     height: 65px;
     width: 100%;
