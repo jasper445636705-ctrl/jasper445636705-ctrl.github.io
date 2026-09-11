@@ -4,28 +4,689 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style2.css">
+    <title>Web Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* ========== ORIGINAL STYLES (unchanged) ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to right, black, #321753);
+        }
+
+        .header {
+            height: 100px;
+            width: 100%;
+            background: linear-gradient(to right, #311ea8, #831f3ab8);
+            color: white;
+            display: flex;
+            position: fixed;
+            z-index: 1000;
+        }
+
+        .header a {
+            margin-left: 20px;
+            padding-top: 30px;
+            color: white;
+        }
+
+        .header a:hover {
+            background: linear-gradient(to right, red, purple);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .nav {
+            margin-left: 750px;
+            padding-top: 35px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            background: linear-gradient(to right, #311ea8, #831f3ab8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .nav a {
+            margin-left: 30px;
+            color: white;
+            font-size: 25px;
+        }
+
+        .nav a:hover {
+            background: linear-gradient(to right, #d92121, #1f1ffc);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .profile {
+            height: 650px;
+            width: 100%;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+        }
+
+        .prof-txt {
+            padding-top: 200px;
+            width: 600px;
+            color: white;
+        }
+
+        .prof-txt span {
+            background: linear-gradient(to right, #311ea8, #831f3ab8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .prof-txt h5 {
+            background: gray;
+            color: white;
+            height: 30px;
+            width: 170px;
+            padding: 8px;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 15px;
+        }
+
+        .prof-txt h1 {
+            margin: 5px 0 1px 0;
+            font-size: 60px;
+        }
+
+        .prof-txt h2 {
+            margin: 0 0 10px 0;
+            font-size: 25px;
+        }
+
+        .prof-txt p {
+            font-size: 23px;
+        }
+
+        .prof-txt a {
+            margin-top: 20px;
+            font-size: 18px;
+            border: 2px solid grey;
+            font-weight: bold;
+            display: inline-block;
+            border-radius: 5px;
+        }
+
+        .skillbtn {
+            background: grey;
+            color: white;
+            padding: 10px 45px;
+        }
+
+        .contactbtn {
+            background: white;
+            color: gray;
+            padding: 10px 30px;
+        }
+
+        .profile img {
+            margin-top: 180px;
+            margin-left: 100px;
+            border-radius: 50%;
+            border: 5px solid white;
+        }
+
+        .skills {
+            height: 650px;
+            width: 100%;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            padding-top: 120px;
+            border-top: 5px solid #321753;
+        }
+
+        .skillcard {
+            display: flex;
+            justify-content: center;
+            color: white;
+        }
+
+        .card1 {
+            height: 200px;
+            width: 200px;
+            background: rgba(128, 128, 128, 0.500);
+            margin: 15px;
+            border-radius: 20px;
+        }
+
+        .card1 h1 {
+            font-size: 140px;
+        }
+
+        .ht h1 { color: darkorange; }
+        .css h1 { color: blue; }
+        .js h1 { color: yellow; }
+        .php h1 { color: darkblue; }
+
+        .python h1 {
+            background: linear-gradient(120deg, blue, yellow);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .java h1 {
+            background: linear-gradient(to bottom, red, blue);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .card1 h2 {
+            font-size: 20px;
+        }
+
+        .contact {
+            height: 750px;
+            width: 100%;
+            color: white;
+            font-size: 22px;
+            padding-top: 120px;
+            border-top: 5px solid #321753;
+        }
+
+        .contact-box {
+            height: 500px;
+            width: 630px;
+            background: rgba(128, 128, 128, 0.250);
+            margin-top: 20px;
+            border-radius: 20px;
+            display: flex;
+        }
+
+        .message-us {
+            color: white;
+            margin: 20px;
+        }
+
+        .message-us p {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        .message-us input {
+            width: 590px;
+            height: 30px;
+            border-radius: 5px;
+            border: 2px solid gray;
+            font-size: 20px;
+            color: black;
+            padding-left: 10px;
+        }
+
+        .message-us textarea {
+            border-radius: 5px;
+            font-size: 20px;
+            border: 2px solid gray;
+            padding-left: 10px;
+            color: black;
+        }
+
+        .message-us a {
+            margin-top: 10px;
+            font-size: 15px;
+            background: white;
+            color: gray;
+            border: 2px solid grey;
+            font-weight: bold;
+            display: inline-block;
+            border-radius: 5px;
+            padding: 10px 20px;
+        }
+
+        .message-us a:hover {
+            background: linear-gradient(to right, #d92121, #1f1ffc);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .accs {
+            display: flex;
+        }
+
+        .accs p {
+            margin-left: 194px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* ============================================================
+           MOBILE / PHONE VERSION — @media (max-width: 768px)
+           Applies when the screen is 768px wide or smaller (phones)
+           ============================================================ */
+        @media (max-width: 768px) {
+
+            /* ----- HEADER / NAVIGATION ----- */
+            .header {
+                height: auto;
+                min-height: 70px;
+                flex-direction: column;
+                align-items: center;
+                position: sticky;
+                top: 0;
+                padding: 10px 0 12px;
+                border-radius: 0 0 18px 18px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            }
+
+            .header a {
+                margin-left: 0;
+                padding-top: 0;
+                font-size: 1.5rem;
+            }
+
+            .header a h1 {
+                font-size: 1.8rem;
+            }
+
+            .nav {
+                margin-left: 0;
+                padding-top: 8px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px 18px;
+                width: 100%;
+            }
+
+            .nav a {
+                margin-left: 0;
+                font-size: 1rem;
+                padding: 5px 8px;
+                border-radius: 30px;
+                background: rgba(255, 255, 255, 0.08);
+                display: inline-flex;
+                align-items: center;
+                gap: 5px;
+            }
+
+            .nav a i {
+                font-size: 0.95rem;
+            }
+
+            /* ----- PROFILE SECTION ----- */
+            .profile {
+                height: auto;
+                min-height: auto;
+                padding: 20px 15px 40px;
+            }
+
+            .content {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .prof-txt {
+                padding-top: 30px;
+                width: 100%;
+                text-align: center;
+            }
+
+            .prof-txt h5 {
+                margin: 0 auto 10px;
+                font-size: 0.85rem;
+                height: auto;
+                width: auto;
+                display: inline-block;
+                padding: 6px 22px;
+                border-radius: 30px;
+            }
+
+            .prof-txt h1 {
+                font-size: 2.4rem;
+                margin: 8px 0 2px;
+                line-height: 1.2;
+            }
+
+            .prof-txt h2 {
+                font-size: 1.2rem;
+                margin: 6px 0 12px;
+                font-weight: 400;
+                color: #d1d5db;
+            }
+
+            .prof-txt p {
+                font-size: 1rem;
+                line-height: 1.5;
+                max-width: 95%;
+                margin: 0 auto 16px;
+                color: #d4d4d4;
+            }
+
+            .prof-txt a {
+                margin: 6px 8px 0;
+                padding: 12px 32px;
+                font-size: 1rem;
+                border-radius: 40px;
+            }
+
+            .skillbtn,
+            .contactbtn {
+                padding: 12px 32px;
+            }
+
+            .profile img {
+                margin: 15px 0 5px;
+                width: 180px;
+                height: 180px;
+                border: 4px solid white;
+                box-shadow: 0 0 25px rgba(147, 51, 234, 0.5);
+            }
+
+            /* ----- SKILLS SECTION ----- */
+            .skills {
+                height: auto;
+                padding: 50px 10px 40px;
+                font-size: 1rem;
+                border-top: 4px solid #321753;
+                margin-top: 10px;
+            }
+
+            .skills h1 {
+                font-size: 2rem;
+                margin-bottom: 25px;
+            }
+
+            .skillcard {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+                margin-bottom: 10px;
+                padding: 0 4px;
+            }
+
+            .card1 {
+                width: 120px;
+                height: 130px;
+                margin: 6px;
+                border-radius: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .card1 h1 {
+                font-size: 3.8rem;
+                line-height: 1;
+            }
+
+            .card1 h2 {
+                font-size: 1rem;
+                margin-top: 4px;
+            }
+
+            /* ----- CONTACT SECTION ----- */
+            .contact {
+                height: auto;
+                padding: 50px 10px 60px;
+                font-size: 1rem;
+                border-top: 4px solid #321753;
+                margin-top: 10px;
+            }
+
+            .contact h1 {
+                font-size: 2rem;
+                margin-bottom: 15px;
+            }
+
+            .contact-box {
+                width: 100%;
+                max-width: 460px;
+                height: auto;
+                margin: 15px auto 0;
+                padding: 15px 12px;
+                border-radius: 24px;
+                display: block;
+            }
+
+            .message-us {
+                margin: 0;
+            }
+
+            .message-us p {
+                font-size: 1rem;
+                margin-top: 14px;
+                margin-bottom: 2px;
+                font-weight: 500;
+            }
+
+            .message-us input {
+                width: 100%;
+                height: 44px;
+                font-size: 1rem;
+                border-radius: 12px;
+                padding-left: 14px;
+                border: 2px solid #4b5563;
+                background: #1f1f2b;
+                color: white;
+            }
+
+            .message-us input:focus {
+                border-color: #a78bfa;
+                outline: none;
+            }
+
+            .message-us textarea {
+                width: 100%;
+                font-size: 1rem;
+                border-radius: 12px;
+                padding: 12px 14px;
+                border: 2px solid #4b5563;
+                background: #1f1f2b;
+                color: white;
+                resize: vertical;
+                min-height: 100px;
+            }
+
+            .message-us textarea:focus {
+                border-color: #a78bfa;
+                outline: none;
+            }
+
+            .message-us input::placeholder,
+            .message-us textarea::placeholder {
+                color: #9ca3af;
+            }
+
+            .accs {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                gap: 8px;
+                margin-top: 18px;
+            }
+
+            .message-us a {
+                margin-top: 0;
+                font-size: 0.85rem;
+                padding: 10px 18px;
+                border-radius: 40px;
+                border: 2px solid #9ca3af;
+                background: white;
+                color: #1f2937;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.2s;
+            }
+
+            .message-us a:hover {
+                background: linear-gradient(to right, #d92121, #1f1ffc);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                border-color: #a78bfa;
+            }
+
+            .message-us a i {
+                font-size: 1.1rem;
+            }
+
+            .accs p {
+                display: none; /* hide the empty spacer paragraph */
+            }
+
+            /* send message button gets extra padding */
+            .accs a:first-child {
+                padding: 10px 22px;
+            }
+
+            /* icon-only links smaller padding */
+            .accs a:not(:first-child) {
+                padding: 10px 12px;
+            }
+
+            /* ----- VERY SMALL PHONES (max 380px) ----- */
+            @media (max-width: 380px) {
+                .header a h1 {
+                    font-size: 1.5rem;
+                }
+
+                .nav a {
+                    font-size: 0.85rem;
+                    padding: 4px 6px;
+                }
+
+                .prof-txt h1 {
+                    font-size: 2rem;
+                }
+
+                .card1 {
+                    width: 100px;
+                    height: 110px;
+                }
+
+                .card1 h1 {
+                    font-size: 3rem;
+                }
+
+                .card1 h2 {
+                    font-size: 0.85rem;
+                }
+
+                .prof-txt a {
+                    padding: 10px 22px;
+                    font-size: 0.9rem;
+                }
+
+                .skillbtn,
+                .contactbtn {
+                    padding: 10px 22px;
+                }
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <div class="main">
-        <div class="box">
-
+    <div class="header">
+        <a href="#profile"><h1>Jasper Gentile</h1></a>
+        <div class="nav">
+            <a href="#profile"><i class="fa-regular fa-circle-user"></i> Profile</a>
+            <a href="#skill"><i class="fa-solid fa-code"></i> Skills</a>
+            <a href="#contact"><i class="fa-regular fa-envelope"></i> Contact</a>
         </div>
-        <div class="box">
+    </div>
 
+    <div class="profile" id="profile">
+        <div class="content">
+            <div class="prof-txt">
+                <h5>Full Stack Developer</h5>
+                <h1>Hi! I am <span>Jasper.</span></h1>
+                <h2>Creating digital experiences that matter</h2>
+                <p>I'm an passionate full stack developer specialized in building exceptonal digital experiences with
+                    modern web technologies.</p>
+                <a href="#skill" class="skillbtn">My Skills</a>
+                <a href="#contact" class="contactbtn">Contact me</a>
+            </div>
+            <img src="profile.jpg" alt="prof-img" height="350px" width="350px">
         </div>
-        <div class="box">
+    </div>
 
+    <div class="skills" id="skill">
+        <h1>Skills</h1>
+        <div class="skillcard">
+            <div class="card1 ht">
+                <h1><i class="fa-brands fa-html5"></i></h1>
+                <h2>HTML</h2>
+            </div>
+            <div class="card1 css">
+                <h1><i class="fa-brands fa-css3"></i></h1>
+                <h2>CSS</h2>
+            </div>
+            <div class="card1 js">
+                <h1><i class="fa-brands fa-js"></i></h1>
+                <h2>JavaScript</h2>
+            </div>
         </div>
-        <div class="box">
-
+        <div class="skillcard">
+            <div class="card1 php">
+                <h1><i class="fa-brands fa-php"></i></h1>
+                <h2>PHP</h2>
+            </div>
+            <div class="card1 python">
+                <h1><i class="fa-brands fa-python"></i></h1>
+                <h2>Python</h2>
+            </div>
+            <div class="card1 java">
+                <h1><i class="fa-brands fa-java"></i></h1>
+                <h2>Java</h2>
+            </div>
         </div>
-        <div class="box">
-
-        </div>
-        <div class="box">
+    </div>
+ 
+    <div class="contact" id="contact" align="center">
+        <h1>Contact</h1>
+        <div class="contact-box">
+            <div align="left">
+                <div class="message-us">
+                    <p>Full Name: </p>
+                    <input type="text" placeholder="fullname">
+                    <p>Email: </p>
+                    <input type="text" placeholder="email">
+                    <p>Subject: </p>
+                    <input type="text" placeholder="subject">
+                    <p>Message: </p>
+                    <textarea name="" id="" rows="7" cols="54" placeholder="message..."></textarea>
+                    <div class="accs">
+                        <a href="">Send Message</a>
+                        <p></p><a href=""><i class="fa-regular fa-envelope"></i></a>
+                        <a><i class="fa-brands fa-github"></i></a>
+                        <a><i class="fa-brands fa-facebook"></i></a>
+                        <a><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </div>
