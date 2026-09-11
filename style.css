@@ -281,31 +281,3 @@ html{
 }
 
 
-@media (max-width: 768px) {
-
-
-    body {
-        background: linear-gradient(to right, black, #321753);
-
-    }
-
-    .header {
-    height: 65px;
-    width: 100%;
-    }
-
-    .header h1 {
-        margin-top: -5px;
-        font-size: 25px
-    }
-
-    .nav {
-        margin-left: 46px;
-        margin-top: -12px;
-    }
-
-    .nav a {
-        font-size: 18px;
-        margin-left: 4px;
-    }
-}
