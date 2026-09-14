@@ -26,7 +26,7 @@ body {
 }
 
 .header a:hover {
-    background: linear-gradient(to right, red, purple);
+    background: linear-gradient(to right, #d92121, #1f1ffc);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -211,7 +211,7 @@ a:hover {
 .contact-box {
     height: 500px;
     width: 630px;
-    background: rgba(128, 128, 128, 0.250);
+    background: rgba(128, 128, 128, 0.200);
     margin-top: 20px;
     border-radius: 20px;
     display: flex;
@@ -224,17 +224,18 @@ a:hover {
 
 .message-us p {
     font-size: 20px;
-    margin-top: 20px;
+    margin-top: 5px;
 }
 
 .message-us input {
     width: 590px;
-    height: 30px;
+    height: 45px;
     border-radius: 5px;
     border: 2px solid gray;
     font-size: 20px;
-    color: black;
+    color: white;
     padding-left: 10px;
+    background: rgba(0, 0, 0, 0.500);
 }
 
 .message-us textarea {
@@ -242,7 +243,8 @@ a:hover {
     font-size: 20px;
     border: 2px solid gray;
     padding-left: 10px;
-    color: black;
+    color: white;
+    background: rgba(0, 0, 0, 0.500);
 }
 
 .message-us a {
