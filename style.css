@@ -135,6 +135,7 @@ a:hover {
     margin-left: 100px;
     border-radius: 50%;
     border: 5px solid white;
+    box-shadow: 0 0 55px rgba(147, 51, 234, 0.5);
 }
 
 .skills {
